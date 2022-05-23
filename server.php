@@ -58,5 +58,17 @@
 				exit('notfound');
 			}
 		}
+
+		if ($_GET['mode'] == 'show') {
+			$sql = "SELECT ID, name, surname, patronymic, birthday, studentgroup FROM students";
+			$result = $db -> query($sql);
+			while ($row = $result->fetch_row()) {
+				for ($i = 0; $i < count($row); $i++) {
+					echo $row[$i];
+					if ($i < count($row)-1) echo ', ';
+				}
+				echo "<br>";
+			}
+		}
 	}
 ?>

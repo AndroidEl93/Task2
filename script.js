@@ -55,3 +55,11 @@
 			}
 		});
 	}
+
+	function showStudents() {
+		let url = "server.php?mode=show";
+
+		$.get(url, function(data, status) {
+			$("#list").html(data);
+		});
+	}
