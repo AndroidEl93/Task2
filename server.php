@@ -36,5 +36,27 @@
 				exit('error');
 			}
 		}
+
+		if ($_GET['mode'] == 'remove') {
+			$removeid = get('removeid', null);
+
+			if ($removeid == null) {
+				exit('error');
+			}
+
+			$sql = "SELECT ID FROM students WHERE ID = '".$removeid."'";
+			$result = $db -> query($sql);
+			if (($result -> num_rows) > 0) {
+				$sql = "DELETE FROM students WHERE ID = '".$removeid."'";
+				$result = $db -> query($sql);
+				if ($result == true) {
+					exit('removed');
+				} else {
+					exit('error');
+				}
+			} else {
+				exit('notfound');
+			}
+		}
 	}
 ?>

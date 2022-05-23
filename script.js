@@ -36,3 +36,22 @@
 			}
 		});
 	}
+
+	function removeStudent() {
+		if (!checkVal("removeid")) {alert("Укажите ID удаляемого студента"); return;}
+
+		let url = "server.php?mode=remove" + getVal("removeid");
+
+		$.get(url, function(data, status) {
+			if (data == "removed") {
+				alert("Запись успешно удалена");
+				$("#removeid").val("");
+			} else {
+				if (data == "notfound") {
+					alert("Запись с таким ID не найдена");
+				} else {
+					alert("Ошибка сервера");
+				}
+			}
+		});
+	}
