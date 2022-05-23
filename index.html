@@ -3,6 +3,8 @@
 	<title>Задание #2</title>
 	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -13,7 +15,7 @@
 		Отчество<input id="patronymic" type="text">
 		Дата рождения*<input id="birthday" type="date">
 		Группа*<input id="group" type="text">
-		<input type="button" value="Добавить студента">
+		<input type="button" value="Добавить студента" onclick="addStudent();">
 
 		<h1>Удаление студента</h1>
 		<h6>Удаление студента из таблицы по уникальному номеру (ID)</h6>
@@ -24,6 +26,7 @@
 		<input type="button" value="Обновить список">
 		<b>ID, Фамилия, Имя, Отчество, Дата рождения, Группа</b>
 		<div id="list"></div>
+
 	</div>
 </body>
 </html>
