@@ -5,6 +5,25 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+	<div class="main">
+		<h1>Добавление студента</h1>
+		<h6>Добавить данные студента в таблицу (* помечены обязательные для заполнения поля)</h6>
+		Фамилия*<input id="surname" type="text">
+		Имя*<input id="name" type="text">
+		Отчество<input id="patronymic" type="text">
+		Дата рождения*<input id="birthday" type="date">
+		Группа*<input id="group" type="text">
+		<input type="button" value="Добавить студента">
 
+		<h1>Удаление студента</h1>
+		<h6>Удаление студента из таблицы по уникальному номеру (ID)</h6>
+		ID Студента*<input id="removeid" type="text">
+		<input type="button" value="Удалить студента">
+
+		<h1>Список студентов</h1>
+		<input type="button" value="Обновить список">
+		<b>ID, Фамилия, Имя, Отчество, Дата рождения, Группа</b>
+		<div id="list"></div>
+	</div>
 </body>
 </html>
